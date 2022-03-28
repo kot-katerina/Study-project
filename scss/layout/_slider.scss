@@ -1,0 +1,123 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.slider__container {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.slider__image {
+    width: 100%;
+    height: auto;
+}
+
+.slider__labels {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    min-height: 85px;
+    transform: translateY(-5px);
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 25%;
+    background-color: #EFF8F7;
+    text-decoration: none;
+}
+
+.label:hover, .label.active  {
+    background-color: #D9EFEC;
+}
+
+.label__title {
+    @include text($ff_text, normal, 400, 100%, none, $col_text);
+    font-size: 18px;
+    margin: 0 0 0 20px;
+    text-align: left
+}
+
+.label__subtitle {
+    @include text($ff_text, italic, 400, 180%, none, $col_text);
+    font-size: 10px;
+    text-align: left;
+    margin: 0 0 0 20px;
+}
+
+@media (min-width: 992px) and (max-width: 1175px) {
+    .slider__image {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .slider__labels {
+        min-height: 30px;
+    }
+
+    .label {
+        align-items: center;
+    }
+
+    .label__title {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .label__subtitle {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .slider__image {
+        max-width: 100%;
+        object-fit: cover;
+    }
+
+    .slider__labels {
+        min-height: 30px;
+    }
+
+    .label {
+        align-items: center;
+    }
+
+    .label__title {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .label__subtitle {
+        display: none;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .slider__container {
+        //height: 353px;
+    } 
+
+    .slider__labels {
+        display: none;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .slider__container {
+        //height: 373px;
+    } 
+
+    .slider__labels {
+        display: none;
+    }
+}

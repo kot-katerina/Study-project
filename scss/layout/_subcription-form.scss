@@ -1,0 +1,129 @@
+.subscription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 30px;
+    border-top: 1px dashed $col_decor;
+    border-bottom: 1px dashed $col_decor;
+}
+
+.subscription__about {
+    display: flex;
+    flex-direction: row;
+    width: 67%;
+}
+
+.subscription__image {
+    max-width: 100%;
+    margin: 10px 18px;
+}
+
+.subscription__text {
+    @include text($ff_text, italic, 400, 120%, none, black);
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.subscription__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+}
+
+.subscription__input {
+    width: 160px;
+    height: 23px;
+    outline: none;
+    border: 1px solid $col_decor;
+    padding-left: 6px;
+    @include text($ff_text, normal, normal, 100%, none, $col_decor);
+    font-size: 10px;
+    margin-right: 18px;
+}
+
+.subscription__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 23px;
+    background: linear-gradient(180deg, #F4F3F3 0%, #BBB9B9 100%);
+    border: none;
+    @include text($ff_text, normal, normal, 100%, none, black);
+    font-size: 10px;
+    margin-right: 18px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .subscription {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .subscription__about {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .subscription__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .subscription__input {
+        width: 72%;
+        margin-left: 18px;
+        margin-bottom: 18px;
+    }
+
+    .subscription__btn {
+        margin-bottom: 18px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .subscription {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .subscription__about {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .subscription__text {
+        width: 80%;
+        margin-right: 5px;
+    }
+
+
+    .subscription__form {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .subscription__input {
+        width: 72%;
+        margin-left: 18px;
+        margin-bottom: 18px;
+    }
+
+    .subscription__btn {
+        margin-bottom: 18px;
+    }
+}
