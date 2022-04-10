@@ -8,13 +8,37 @@
 .slider__container {
     display: flex;
     width: 100%;
-    height: fit-content;
-    overflow: hidden;
+    height: 445px;
 }
 
-.slider__image {
+.slide {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: auto;
+}
+
+.one {
+    background-image: url(../images/baner-big.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.two {
+    background-image: url(../images/two.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.three {
+    background-image: url(../images/three.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.four {
+    background-image: url(../images/four.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .slider__labels {

@@ -1,0 +1,79 @@
+@import "./helpers/variables";
+@import "./helpers/mixins";
+@import "./layout/information";
+@import "./components/logo";
+@import "./components/menu";
+@import "./layout/twit";
+@import "./layout/navigation";
+@import "./layout/information";
+@import "./layout/slider";
+@import "./layout/subcription-form";
+@import "./layout/articles";
+@import "./components/footer";
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 1176px;
+    max-width: none;
+    height: 100%;
+    margin: 0 auto;
+    background-color: $col_back;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex: 1 0 auto;
+    width: 80%;
+    max-width: 1080px;
+    margin: 46px auto 0;
+    border-bottom: 2px solid $col_decor;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .page {
+        min-width: 768px;
+        max-width: 991px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 712px;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .page {
+        min-width: 480px;
+        max-width: 767px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 545px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .page {
+        width: 100%;
+        min-width: 320px;
+        max-width: 479px;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        border-bottom: none;
+    }
+}
+
